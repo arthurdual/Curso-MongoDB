@@ -1,0 +1,8 @@
+my sql banco de dados relacionais
+utiliza tabelas
+estrutura bem definida
+
+mongo db
+utiliza coleções de documentos
+SCHEMALESS //estrutura nao precisa ser bem definida
+

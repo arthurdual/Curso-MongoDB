@@ -1,0 +1,7 @@
+my sql banco de dados relacionais
+selects joins 
+
+mongo db
+utiliza coleções de documentos
+
+

@@ -1,0 +1,26 @@
+MongoDb
+abra o cmd e inicio o mongo com mongod
+C:\Users\arthu>mongoo
+> use loja
+ db.produtos.insert({cdProdutos: 1, nmProduto: "Churros"});
+> db.produtos.find();
+> show collections
+> db.stats()
+> db.loja.produtos.stats()
+
+
+
+> db.produto.insert({cdProdutod: 2, nmProduto: "farinha"})
+WriteResult({ "nInserted" : 1 })
+> db.produto.find()
+{ "_id" : ObjectId("5d7aa12f75b2a2862dff5a72"), "cdProdutod" : 2, "nmProduto" : "farinha" }
+> db.produto.insert({cdProdutod: 3, nmProduto: "arroz", dtValidade: new Date()})
+WriteResult({ "nInserted" : 1 })
+> db.produto.find()
+{ "_id" : ObjectId("5d7aa12f75b2a2862dff5a72"), "cdProdutod" : 2, "nmProduto" : "farinha" }
+{ "_id" : ObjectId("5d7aa1ca75b2a2862dff5a73"), "cdProdutod" : 3, "nmProduto" : "arroz", "dtValidade" : ISODate("2019-09-12T19:51:38.474Z") }
+>
+
+
+
+

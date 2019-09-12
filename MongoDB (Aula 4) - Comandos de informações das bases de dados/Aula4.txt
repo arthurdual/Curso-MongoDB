@@ -1,0 +1,65 @@
+MongoDb
+abra o cmd e inicio o mongo com mongod
+
+C:\Users\arthu>mongoo
+> use loja
+switched to db loja
+ db.produtos.insert({cdProdutos: 1, nmProduto: "Churros"});
+WriteResult({ "nInserted" : 1 })
+> db.produtos.find();
+{ "_id" : ObjectId("5d7a97b775b2a2862dff5a71"), "cdProdutos" : 1, "nmProduto" : "Churros" }
+> cls //limpa o cmd
+
+> show collections;
+produtos
+> show dbs;
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+loja    0.000GB
+> use test
+switched to db test
+> show collections;
+> use loja
+switched to db loja
+> show collections;
+produtos
+>
+
+
+> use loja
+switched to db loja
+> show collections
+produtos
+> db.stats()
+{
+        "db" : "loja",
+        "collections" : 1,
+        "views" : 0,
+        "objects" : 1,
+        "avgObjSize" : 65,
+        "dataSize" : 65,
+        "storageSize" : 20480,
+        "numExtents" : 0,
+        "indexes" : 1,
+        "indexSize" : 20480,
+        "scaleFactor" : 1,
+        "fsUsedSize" : 87267454976,
+        "fsTotalSize" : 998865104896,
+        "ok" : 1
+}
+> db.loja.produtos.stats()
+{
+        "ns" : "loja.loja.produtos",
+        "size" : 0,
+        "count" : 0,
+        "storageSize" : 0,
+        "nindexes" : 0,
+        "totalIndexSize" : 0,
+        "indexSizes" : {
+
+        },
+        "scaleFactor" : 1,
+        "ok" : 1
+}
+>

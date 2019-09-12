@@ -1,0 +1,49 @@
+MongoDb
+abra o cmd e inicio o mongo com mongod
+C:\Users\arthu>mongoo
+> use loja
+ db.produtos.insert({cdProdutos: 1, nmProduto: "Churros"});
+> db.produtos.find();
+> show collections
+> db.stats()
+> db.loja.produtos.stats()
+> db.produtos.insert({cdProdutod: 2, nmProduto: "farinha"})
+> db.produtos.find()
+> db.produtos.insert({cdProdutod: 3, nmProduto: "arroz", dtValidade: new Date()})
+> db.produto.find()
+
+
+> db.produtos.insert({
+    cdProdutos: 4,
+    nmProdutos: "oleo",
+    dtValidade: new Date()
+    tags:["oleo", "vegetal","mineral", "animal"]
+})
+> db.produtos.find()
+
+> db.produtos.insert({
+    cdProdutos: 5,
+    nmProdutos: "Feijao",
+    dtValidade: new Date()
+    tags:["carioca", "branco"]
+    fornecedor: {
+        cdFornecedor:1,
+        nmFornecedor:"Fazenda do beto cachça"
+    }
+})
+> db.produtos.find()
+
+
+Crud
+Create
+db.collection.insert() //insere 1 ou mais 
+db.collection.insertOne() //insere apenas um mesmo que tenha mais
+db.collection.insertMany() //insere 1 ou mais
+
+   db.products.insertMany( [
+      { item: "card", qty: 15 },
+      { item: "envelope", qty: 20 },
+      { item: "stamps" , qty: 30 }
+   ] );
+
+

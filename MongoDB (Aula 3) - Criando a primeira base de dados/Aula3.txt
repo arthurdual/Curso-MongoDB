@@ -1,0 +1,21 @@
+MySql
+CREATE DATABASE Teste;
+CREATE TABLE tb_Produtos(
+    cdProduto int not null,
+    nProdutos NVARCHAR(50) NOT NULL,
+)
+
+INSERT INTO td_Produtos VALUES (1, 'churros');
+select * from td_Produtos
+
+MongoDb
+abra o cmd e inicio o mongo com mongod
+
+C:\Users\arthu>mongoo
+> use loja
+switched to db loja
+ db.produtos.insert({cdProdutos: 1, nmProduto: "Churros"});
+WriteResult({ "nInserted" : 1 })
+> db.produtos.find();
+{ "_id" : ObjectId("5d7a97b775b2a2862dff5a71"), "cdProdutos" : 1, "nmProduto" : "Churros" }
+> cls //limpa o cmd
