@@ -1,0 +1,31 @@
+/*jshint esversion:6 */
+/*
+*/
+show collections
+
+//cria collecton produtos
+db.produtos.find()
+db.clientes.insertOne({
+    cdCliente: 1,
+    mnCliente: "Bruno",
+    inAtivo: 1
+});
+db.clientes.find().pretty()
+
+//cria collecton vendas
+db.vendas.insertOne({
+    cdCliente: 1,
+    produtos: [
+        {cdProduto: 1},
+        {cdProduto: 2},
+        {cdProduto: 3},
+        {cdProduto: 4},
+        {cdProduto: 5}
+    ]
+});
+
+db.vendas.find().pretty()
+db.vendas.find({cdProdutos:1}).pretty()
+
+
+
